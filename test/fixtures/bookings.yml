@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_date: 2022-12-02
+  due_date: 2022-12-02
+  total_price: 1.5
+
+two:
+  booking_date: 2022-12-02
+  due_date: 2022-12-02
+  total_price: 1.5
