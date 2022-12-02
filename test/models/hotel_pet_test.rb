@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class HotelPetTest < ActiveSupport::TestCase
   # test "the truth" do
