@@ -1,0 +1,2 @@
+class HotelPet < ApplicationRecord
+end
