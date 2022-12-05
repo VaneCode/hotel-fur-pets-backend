@@ -21,6 +21,7 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+
 development:
   <<: *default
   database: hotel_fur_pets_backend_development
@@ -82,5 +83,4 @@ test:
 production:
   <<: *default
   database: hotel_fur_pets_backend_production
-  username: hotel_fur_pets_backend
-  password: <%= ENV["HOTEL_FUR_PETS_BACKEND_DATABASE_PASSWORD"] %>
+  

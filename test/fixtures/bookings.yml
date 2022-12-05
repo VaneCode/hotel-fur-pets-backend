@@ -1,11 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  booking_date: 2022-12-02
-  due_date: 2022-12-02
-  total_price: 1.5
+  checking_in: 2022-12-05
+  checking_out: 2022-12-05
+  animal_type: MyString
+  animal_name: MyString
+  user: one
+  hotel: one
 
 two:
-  booking_date: 2022-12-02
-  due_date: 2022-12-02
-  total_price: 1.5
+  checking_in: 2022-12-05
+  checking_out: 2022-12-05
+  animal_type: MyString
+  animal_name: MyString
+  user: two
+  hotel: two
