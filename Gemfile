@@ -15,6 +15,8 @@ gem 'puma', '~> 5.0'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
+gem 'active_model_serializers'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -32,7 +34,7 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 gem 'devise-jwt'
-gem 'dotenv-rails'
+gem 'fast_jsonapi'
 
 gem 'bullet'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]

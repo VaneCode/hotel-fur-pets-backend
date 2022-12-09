@@ -1,26 +1,19 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[show update destroy]
+  before_action :authenticate_user!
 
   # GET /bookings
   def index
-    @bookings = Booking.all
-
-    render json: @bookings
+    render json: current_user.bookings.all
   end
-
-  # GET /bookings/1
-  def show
-    render json: @booking
-  end
+  
 
   # POST /bookings
   def create
     @booking = Booking.new(booking_params)
-
-    if @booking.save
-      render json: @booking, status: :created, location: @booking
+    if @booking.save!
+      render json: { message: 'booking created' }, status: :created
     else
-      render json: @booking.errors, status: :unprocessable_entity
+      render json: { error: 'Unable to create booking' }, status: :unprocessable_entity
     end
   end
 
@@ -35,18 +28,20 @@ class BookingsController < ApplicationController
 
   # DELETE /bookings/1
   def destroy
+    @booking = Booking.find(params[:id])
     @booking.destroy
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_booking
-    @booking = Booking.find(params[:id])
-  end
-
+ 
   # Only allow a list of trusted parameters through.
   def booking_params
-    params.require(:booking).permit(:checking_in, :checking_out, :animal_type, :animal_name, :user_id, :hotel_id)
+    params.require(:booking)
+      .permit(:start_date, :end_date, :hotel_id)
+      .with_defaults(user_id: current_user.id)
   end
 end

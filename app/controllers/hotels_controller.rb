@@ -3,7 +3,7 @@ class HotelsController < ApplicationController
 
   # GET /hotels
   def index
-    @hotels = Hotel.all
+    @hotels = Hotel.all.order(created_at: :desc)
 
     render json: @hotels
   end
