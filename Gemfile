@@ -15,6 +15,8 @@ gem 'puma', '~> 5.0'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
+gem 'active_model_serializers'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -32,7 +34,7 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 gem 'devise-jwt'
-gem 'dotenv-rails'
+gem 'fast_jsonapi'
 
 gem 'bullet'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -40,6 +42,8 @@ gem 'bullet'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
+
+gem "rswag"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

@@ -46,6 +46,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_model_serializers (0.10.13)
+      actionpack (>= 4.1, < 7.1)
+      activemodel (>= 4.1, < 7.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (7.0.4)
       activesupport (= 7.0.4)
       globalid (>= 0.3.6)
@@ -66,6 +71,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     bcrypt (3.1.18)
     bootsnap (1.15.0)
       msgpack (~> 1.2)
@@ -73,6 +80,8 @@ GEM
     bullet (7.0.4)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
+    case_transform (0.2)
+      activesupport
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.6.3)
@@ -87,10 +96,6 @@ GEM
     devise-jwt (0.10.0)
       devise (~> 4.0)
       warden-jwt_auth (~> 0.6)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
     dry-auto_inject (0.9.0)
       dry-container (>= 0.3.4)
     dry-configurable (0.16.1)
@@ -102,6 +107,8 @@ GEM
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     erubi (1.11.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -109,6 +116,9 @@ GEM
     io-console (0.5.11)
     irb (1.5.1)
       reline (>= 0.3.0)
+    json-schema (3.0.0)
+      addressable (>= 2.8)
+    jsonapi-renderer (0.2.2)
     jwt (2.5.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -136,6 +146,7 @@ GEM
     orm_adapter (0.5.0)
     pg (1.4.5)
     pg (1.4.5-x64-mingw-ucrt)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -176,6 +187,23 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rspec-core (3.12.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.0)
+    rswag (2.8.0)
+      rswag-api (= 2.8.0)
+      rswag-specs (= 2.8.0)
+      rswag-ui (= 2.8.0)
+    rswag-api (2.8.0)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.8.0)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (>= 2.2, < 4.0)
+      railties (>= 3.1, < 7.1)
+      rspec-core (>= 2.14)
+    rswag-ui (2.8.0)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     thor (1.2.1)
     timeout (0.3.0)
     tzinfo (2.0.5)
@@ -200,17 +228,19 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_model_serializers
   bcrypt (~> 3.1.7)
   bootsnap
   bullet
   debug
   devise
   devise-jwt
-  dotenv-rails
+  fast_jsonapi
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.4)
+  rswag
   tzinfo-data
 
 RUBY VERSION
