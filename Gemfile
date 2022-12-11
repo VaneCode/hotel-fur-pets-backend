@@ -34,6 +34,7 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 gem 'devise-jwt'
+gem 'dotenv-rails'
 gem 'fast_jsonapi'
 
 gem 'bullet'
@@ -43,11 +44,15 @@ gem 'bullet'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
-gem "rswag"
+gem 'rswag'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'ffi'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do

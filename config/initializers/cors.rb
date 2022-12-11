@@ -16,7 +16,6 @@
 # end
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
-<<<<<<< HEAD
     allow do
       origins '*'
       resource '*',
@@ -25,15 +24,5 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
       max_age: 600
     end
-=======
-  allow do
-    origins '*'
-    resource(
-     '*',
-     headers:["Authorization"],
-     expose: ["Authorization"],
-     methods: [:get, :patch, :put, :delete, :post, :options, :show]
-    )
->>>>>>> 9a07769718073df5506936bbf8f8891ce714db20
-  end
 end
+

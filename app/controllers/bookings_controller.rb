@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
   def index
     render json: current_user.bookings.all
   end
-  
 
   # POST /bookings
   def create
@@ -37,7 +36,6 @@ class BookingsController < ApplicationController
 
   private
 
- 
   # Only allow a list of trusted parameters through.
   def booking_params
     params.require(:booking)

@@ -10,4 +10,9 @@ class User < ApplicationRecord
   has_many :hotels, through: :bookings
 
   validates :name, presence: true, length: { maximum: 30 }
+  validates :phone, :email, :password, presence: true
+
+  def admin?
+    role == 'admin'
+  end
 end
