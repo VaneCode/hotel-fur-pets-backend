@@ -3,7 +3,7 @@
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>MONEY MOVES</b></h3>
+  <h3><b>HOTEL FUR PETS API</b></h3>
 
 </div>
 
@@ -30,7 +30,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 Money moves <a name="about-project"></a>
+# 📖 Hotel Fur Pets API <a name="about-project"></a>
 
 This is a mobile web application, which allows users to control their budgets. The user can divide the budget into different categories and insert the expenses that have been made in the categories. 
 
