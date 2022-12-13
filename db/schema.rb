@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_171912) do
     t.string "location"
     t.integer "rating", default: 0
     t.float "price", default: 0.0
-    t.string "photo"
+    t.string "photo", array: true
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
