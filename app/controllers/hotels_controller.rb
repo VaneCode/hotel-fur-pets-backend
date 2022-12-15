@@ -35,7 +35,12 @@ class HotelsController < ApplicationController
 
   # DELETE /hotels/1
   def destroy
+    @hotel = Hotel.find(params[:id])
     @hotel.destroy
+
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private

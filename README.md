@@ -27,12 +27,11 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 # 📖 Hotel Fur Pets API <a name="about-project"></a>
 
-This is a mobile web application, which allows users to control their budgets. The user can divide the budget into different categories and insert the expenses that have been made in the categories. 
+This is a API that allows to consume the data of differents hotels for pets. It also allows to make bookings, and fetch the data of the bookings. This API was build with Ruby on Rails.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -61,18 +60,16 @@ This is a mobile web application, which allows users to control their budgets. T
 
 ### Key Features <a name="key-features"></a>
 
-- List all budget's categories.
-- List all transactions that belongs to one category.
-- Add a new category.
-- Add a new transaction.
+- Authentication.
+- Create a booking.
+- Get the bookings of the current user.
+- Get the data of the hotels.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+> Comming soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,7 +94,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/VaneCode/money_moves.git
+  git clone https://github.com/VaneCode/hotel-fur-pets-backend.git
 ```
 
 ### Install
@@ -111,11 +108,11 @@ Install this project with:
 
 ### Usage
 
-This project use Tailwind, so to run the project, execute the following command:
+To execute the following command:
 
 
 ```sh
-  bin/dev
+  rails s
 ```
 
 ### Run tests
@@ -145,13 +142,18 @@ You can deploy this project using:
 - Twitter: [@BonitoNarvaez](https://twitter.com/BonitoNarvaez)
 - LinkedIn: [Vanessa Bonito Narváez](https://www.linkedin.com/in/vanessa-bonito-narvaez/)
 
+👤 **Aro Abraham**
+
+-  GitHub: [@Aaron](https://github.com/aron-helu)
+- LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/) 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [Implement the left side menu.] **[new_feature_1]**
-- [Add dark theme.] **[new_feature_2]**
-- [Add user picture profile.] **[new_feature_3]**
+- [Calculate the total price of the bookings.]
+- [Allow the user to search bookings by date.] 
+- [Add roles for users.] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,19 +177,6 @@ Give a star if you like this project!
 - Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ❓ FAQ <a name="faq"></a>
-
-- Why bin/dev instead of rails server?
-
-  - The commend bin/dev not only start your server, it also builts your Tailwind CSS classes to give the styles.
-
-- What is current_user?
-
-  - This is a built-in method of Devise which help to get the user who is currently loged in the app.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
