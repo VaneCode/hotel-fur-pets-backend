@@ -144,8 +144,19 @@ You can deploy this project using:
 
 👤 **Aro Abraham**
 
--  GitHub: [@Aaron](https://github.com/aron-helu)
+- GitHub: [@Aaron](https://github.com/aron-helu)
 - LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/) 
+
+👤 **Jean Bulambo**
+
+- GitHub: [@Jeanbulambo](https://github.com/Jeanbulambo)
+- LinkedIn: [@Jeanbulambo](https://www.linkedin.com/in/jean-bulambo-20662a14a/)
+
+👤 **Achike Chuma Edward**
+
+- GitHub: [@chumaachike](https://github.com/chumaachike)
+- Twitter: [@AchikeChuma](https://twitter.com/AchikeChuma)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/edward-achike-903432111/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

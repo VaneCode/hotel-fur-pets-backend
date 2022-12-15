@@ -16,7 +16,6 @@ class HotelsController < ApplicationController
   # POST /hotels
   def create
     @hotel = Hotel.new(hotel_params)
-
     if @hotel.save
       render json: @hotel, status: :created, location: @hotel
     else
