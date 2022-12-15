@@ -48,7 +48,7 @@ This is a mobile web application, which allows users to control their budgets. T
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://render.com/">Render</a></li>
+    <li><a href="https://render.com/">Localhost</a></li>
   </ul>
 </details>
 
