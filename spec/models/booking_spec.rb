@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Booking, type: :model do
   before(:each) do
-    @user = User.new(name: 'Samantha Woods', photo: 'https/picture.com', phone: '1234', email: 'sam@outlook.com', password: 'password',
+    @user = User.new(name: 'Samantha Woods', phone: '1234', email: 'sam@outlook.com', password: 'password',
                      password_confirmation: 'password')
     @hotel = Hotel.create(name: 'Hounds Lounge', location: 'Arkansas, United States', rating: 4, price: 39.99, photo: 'https://www.houndslounge.com/wp-content/uploads/2019/05/Owner-Mandy-holding-clients-pet-at-front-desk.jpg',
                           description: 'Overnight stays are full of fun at Hounds Lounge. All furry guests get their own private luxury suites, complete with fresh food and water bowls, and a very trendy raised bed!')

@@ -5,7 +5,7 @@ class CreateHotels < ActiveRecord::Migration[7.0]
       t.string :location
       t.integer :rating, default: 0
       t.float :price, default: 0.0
-      t.string :photo
+      t.string :photo, array: true
       t.text :description
 
       t.timestamps

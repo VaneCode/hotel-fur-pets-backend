@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject do
-    User.new(name: 'Samantha Woods', photo: 'https/picture.com', phone: '1234', email: 'sam@outlook.com', password: 'password',
+    User.new(name: 'Samantha Woods', phone: '1234', email: 'sam@outlook.com', password: 'password',
              password_confirmation: 'password')
   end
 
@@ -36,14 +36,14 @@ RSpec.describe User, type: :model do
 
   context 'Test user methods' do
     it 'user is not the admin the method admin should be false' do
-      user = User.new(name: 'Samantha Woods', photo: 'https/picture.com', phone: '1234', email: 'sam@outlook.com', password: 'password',
+      user = User.new(name: 'Samantha Woods', phone: '1234', email: 'sam@outlook.com', password: 'password',
                       password_confirmation: 'password')
       admin = user.admin?
       expect(admin).to be false
     end
 
     it 'user is the admin the method admin should be true' do
-      user = User.new(name: 'Samantha Woods', photo: 'https/picture.com', phone: '1234', email: 'sam@outlook.com', password: 'password',
+      user = User.new(name: 'Samantha Woods', phone: '1234', email: 'sam@outlook.com', password: 'password',
                       password_confirmation: 'password', role: 'admin')
       admin = user.admin?
       expect(admin).to be true

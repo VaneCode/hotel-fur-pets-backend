@@ -16,7 +16,6 @@ class HotelsController < ApplicationController
   # POST /hotels
   def create
     @hotel = Hotel.new(hotel_params)
-
     if @hotel.save
       render json: @hotel, status: :created, location: @hotel
     else
@@ -35,7 +34,12 @@ class HotelsController < ApplicationController
 
   # DELETE /hotels/1
   def destroy
+    @hotel = Hotel.find(params[:id])
     @hotel.destroy
+
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private
