@@ -142,7 +142,7 @@ You can deploy this project using:
 - Twitter: [@BonitoNarvaez](https://twitter.com/BonitoNarvaez)
 - LinkedIn: [Vanessa Bonito Narváez](https://www.linkedin.com/in/vanessa-bonito-narvaez/)
 
-👤 **Aro Abraham**
+👤 **Aron Abraham**
 
 - GitHub: [@Aaron](https://github.com/aron-helu)
 - LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/) 
