@@ -184,7 +184,6 @@ Give a star if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- This project's styles are based on the [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=&&&) by [Gregoire Vella](http://linkedin.com/company/minimalapps).
 - Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
