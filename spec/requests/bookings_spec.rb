@@ -20,7 +20,18 @@ RSpec.describe 'bookings', type: :request do
 
     post('create booking') do
       response(200, 'successful') do
-
+        consumes 'application/json'        
+        parameter name: :booking, in: :body, schema: {          
+        type: :object,          
+        properties: {
+          id: {type: :number},
+          checking_in: {types: :string},
+          checking_out: {type: :string},
+          animal_type: {types: :string},
+          animal_name: {type: :string}         
+        },          
+        required: %w[name model]  
+      }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

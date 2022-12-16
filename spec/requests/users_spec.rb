@@ -80,20 +80,5 @@ RSpec.describe 'users', type: :request do
         run_test!
       end
     end
-
-    delete('delete user') do
-      response(200, 'successful') do
-        let(:id) { '123' }
-
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
-    end
   end
 end

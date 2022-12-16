@@ -12,9 +12,29 @@ paths:
           description: successful
     post:
       summary: create booking
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                checking_in:
+                  types: string
+                checking_out:
+                  type: string
+                animal_type:
+                  types: string
+                animal_name:
+                  type: string
+              required:
+              - name
+              - model
   "/bookings/{id}":
     parameters:
     - name: id
@@ -109,6 +129,40 @@ paths:
   "/":
     get:
       summary: list hotels
+      responses:
+        '200':
+          description: successful
+  "/users":
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      responses:
+        '200':
+          description: successful
+  "/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update user
       responses:
         '200':
           description: successful
