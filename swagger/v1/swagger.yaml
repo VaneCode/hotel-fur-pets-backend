@@ -5,79 +5,17 @@ info:
   version: v1
 paths:
   "/bookings":
-    post:
-      summary: Creates a booking
-      tags:
-      - bookings
-      parameters: []
-      responses:
-        '201':
-          description: booking created
-        '422':
-          description: You need to sign in or sign up before continuing.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                id:
-                  type: integer
-                start_date:
-                  type: string
-                end_date:
-                  type: string
-                user_id:
-                  type: integer
-                package_id:
-                  type: integer
-              required:
-              - id
-              - start_date
-              - end_date
-              - user_id
-              - package_id
     get:
-      summary: List all bookings
-      tags:
-      - bookings
+      summary: list bookings
       responses:
         '200':
           description: successful
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    start_date:
-                      type: string
-                    end_date:
-                      type: string
-                    user_id:
-                      type: integer
-                    package_id:
-                      type: integer
-                  required:
-                  - id
-                  - start_date
-                  - end_date
-                  - user_id
-                  - package_id
-  "/packages":
     post:
-      summary: Creates a package
-      tags:
-      - packages
+      summary: create booking
       parameters: []
       responses:
-        '201':
-          description: package created
-        '422':
-          description: invalid request
+        '200':
+          description: successful
       requestBody:
         content:
           application/json:
@@ -85,128 +23,151 @@ paths:
               type: object
               properties:
                 id:
-                  type: integer
-                title:
+                  type: number
+                checking_in:
+                  types: string
+                checking_out:
+                  type: string
+                animal_type:
+                  types: string
+                animal_name:
+                  type: string
+              required:
+              - name
+              - model
+  "/bookings/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show booking
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update booking
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update booking
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete booking
+      responses:
+        '200':
+          description: successful
+  "/hotels":
+    get:
+      summary: list hotels
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create hotel
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                name:
                   type: string
                 description:
                   type: string
-                destination:
+                photo:
+                  type: array
+                rating:
+                  type: number
+                location:
                   type: string
                 price:
-                  type: integer
-                flight:
-                  type: boolean
-                promotion:
-                  type: integer
-                hotel:
-                  type: string
-                photo:
-                  type: string
+                  type: number
               required:
-              - id
-              - title
-              - description
-              - destination
-              - hotel
+              - name
+              - model
+  "/hotels/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
     get:
-      summary: List all packages
-      tags:
-      - packages
+      summary: show hotel
       responses:
         '200':
           description: successful
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    title:
-                      type: string
-                    description:
-                      type: string
-                    destination:
-                      type: string
-                    price:
-                      type: integer
-                    flight:
-                      type: boolean
-                    promotion:
-                      type: integer
-                    hotel:
-                      type: string
-                    photo:
-                      type: array
-                  required:
-                  - id
-                  - title
-                  - description
-                  - destination
-                  - hotel
-  "/login":
-    post:
-      summary: User signs-in
-      tags:
-      - login
-      parameters: []
+    patch:
+      summary: update hotel
       responses:
-        '201':
-          description: user created
-        '422':
-          description: invalid request
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                user:
-                  type: object
-                  properties:
-                    email:
-                      type: string
-                    password:
-                      type: string
-                  required:
-                  - email
-                  - password
-  "/signup":
-    post:
-      summary: Creates an user
-      tags:
-      - registration
-      parameters: []
+        '200':
+          description: successful
+    put:
+      summary: update hotel
       responses:
-        '201':
-          description: user created
-        '422':
-          description: invalid request
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                user:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                    email:
-                      type: string
-                    password:
-                      type: string
-                    password_confirmation:
-                      type: string
-                  required:
-                  - name
-                  - email
-                  - password
+        '200':
+          description: successful
+    delete:
+      summary: delete hotel
+      responses:
+        '200':
+          description: successful
+  "/":
+    get:
+      summary: list hotels
+      responses:
+        '200':
+          description: successful
+  "/users":
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      responses:
+        '200':
+          description: successful
+  "/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update user
+      responses:
+        '200':
+          description: successful
 servers:
-- url: http://localhost:5000
+- url: http://{defaultHost}
   variables:
     defaultHost:
-      default: http://localhost:5000
+      default: 127.0.0.1:3000/
