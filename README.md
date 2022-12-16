@@ -149,12 +149,12 @@ You can deploy this project using:
 
 
 ```sh
-
+rails s
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Vanessa Bonito**
 
@@ -182,9 +182,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [Calculate the total price of the bookings.]
-- [Allow the user to search bookings by date.] 
-- [Add roles for users.] 
+- Calculate the total price of the bookings.
+- Allow the user to search bookings by date.
+- Add roles for users. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
