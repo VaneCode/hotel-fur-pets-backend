@@ -12,6 +12,7 @@
 
 - [📖 About the Project](#about-project)
   - [Kanban board](#kanban-board)
+  - [Database diagram](#database-diagram)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -34,7 +35,7 @@
 
 This is a API that allows to consume the data of differents hotels for pets. It also allows to make bookings, and fetch the data of the bookings. This API was build with Ruby on Rails.
 
-# Kanban board <a name="kanban-board"></a>
+## Kanban board <a name="kanban-board"></a>
 
 You can see our [kanban board](https://github.com/users/Jeanbulambo/projects/2)
 
@@ -46,6 +47,12 @@ In our group we are 4 people:
 - [@Aaron](https://github.com/aron-helu) 
 - [@chumaachike](https://github.com/chumaachike)
 - [@Jeanbulambo](https://github.com/Jeanbulambo)
+
+## Database diagram <a name="database-diagram"></a>
+
+The database of this project has three entities user, hotel and booking. 
+
+![image](https://user-images.githubusercontent.com/53547956/208120547-c792db3d-4370-4034-a941-384800f729fc.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
