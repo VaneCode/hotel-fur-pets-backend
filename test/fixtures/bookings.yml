@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checking_in: 2022-12-05
+  checking_out: 2022-12-05
+  animal_type: MyString
+  animal_name: MyString
+  user: one
+  hotel: one
+
+two:
+  checking_in: 2022-12-05
+  checking_out: 2022-12-05
+  animal_type: MyString
+  animal_name: MyString
+  user: two
+  hotel: two

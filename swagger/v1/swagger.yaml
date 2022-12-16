@@ -1,0 +1,173 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/bookings":
+    get:
+      summary: list bookings
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create booking
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                checking_in:
+                  types: string
+                checking_out:
+                  type: string
+                animal_type:
+                  types: string
+                animal_name:
+                  type: string
+              required:
+              - name
+              - model
+  "/bookings/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show booking
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update booking
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update booking
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete booking
+      responses:
+        '200':
+          description: successful
+  "/hotels":
+    get:
+      summary: list hotels
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create hotel
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                name:
+                  type: string
+                description:
+                  type: string
+                photo:
+                  type: array
+                rating:
+                  type: number
+                location:
+                  type: string
+                price:
+                  type: number
+              required:
+              - name
+              - model
+  "/hotels/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show hotel
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update hotel
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update hotel
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete hotel
+      responses:
+        '200':
+          description: successful
+  "/":
+    get:
+      summary: list hotels
+      responses:
+        '200':
+          description: successful
+  "/users":
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      responses:
+        '200':
+          description: successful
+  "/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000/
