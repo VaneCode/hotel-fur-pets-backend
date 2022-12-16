@@ -47,7 +47,6 @@ RSpec.describe 'hotels', type: :request do
   end
 
   path '/hotels/{id}' do
-    # You'll want to customize the parameter types...
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show hotel') do
